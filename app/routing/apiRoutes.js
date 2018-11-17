@@ -5,9 +5,8 @@ module.exports = function (app) {
         res.json(friends)
     })
 
-    app.post('/api/friends', function (req, res) {
-        let newfriend = req.body
-        friends.push(newfriend)
-        res.json(newfriend)
+    app.post("/api/friends", function (req, res) {
+        friends.push(req.body);
+        res.json(true)
     })
 }
